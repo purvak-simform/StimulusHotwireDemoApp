@@ -8,6 +8,15 @@
     </figcaption>
   </figure>
 </div>
+<button class="link">Clicky</button>
+<% if current_user.admin? %>
+  <%= turbo_stream_from(:users) %>
+  <div id="users">
+    <%= render partial: 'users/users_count', locals: { users: @users } %>
+  </div>
+  <%= link_to 'Users', users_list_path, class: 'btn btn-primary'%>
+<% end %>
+<%= link_to 'Genere', generes_path, class: 'btn btn-primary'%>
 
 <h1>This is home</h1>
 <%= turbo_frame_tag 'anyframe' do %>        
