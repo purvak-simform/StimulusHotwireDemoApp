@@ -4,7 +4,7 @@ class GeneresController < ApplicationController
 
   # GET /generes or /generes.json
   def index
-    @generes = Genere.all
+    @generes = Genere.all.order(position: :asc)
   end
 
   # GET /generes/1 or /generes/1.json

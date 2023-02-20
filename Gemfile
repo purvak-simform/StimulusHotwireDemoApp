@@ -53,6 +53,7 @@ gem 'bootstrap', '~> 5.1.3'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "pry"
 end
 
 group :development do
@@ -76,3 +77,5 @@ end
 gem "devise", "~> 4.8"
 
 gem "pundit", "~> 2.3"
+
+gem "acts_as_list", "~> 1.1"
